@@ -1,0 +1,11 @@
+firstname,lastname,checkin,checkout
+'firstname':"Sally",'ignorar2':'1','ignorar3':'2019-03-13','ignorar4':'2019-03-13'
+'ignorar1':"Sally",'lastname':'Smith','ignorar3':'2019-03-13','ignorar4':'2019-03-13'
+'ignorar1':Sally,'ignorar2':'1','checkin':'2019-03-13','ignorar4':'2019-03-13'
+'ignorar1':"Sally",'ignorar2':'1','ignorar3':'2019-03-13','checkout':'2018-12-31'
+'firstname':"John",'lastname':'Smith','checkin':'2017-03-13','ignorar4':'2019-03-13'
+'firstname':"John",'ignorar2':'Smith','ignorar3':'2019-03-13','checkout':'2019-03-13'
+'ignorar1':"John",'lastname':'Smith','checkin':'2017-03-13','ignorar4':'2019-03-13'
+'ignorar1':"John",'lastname':'Smith','ignorar3':'2017-03-13','checkout':'2019-03-13'
+'ignorar1':"John",'ignorar2':'Smith','checkin':'2018-03-13','checkout':'2024-03-13'
+'firstname':"John",'lastname':'Smith','checkin':'2017-03-13','checkout':'2024-03-13'

@@ -1,7 +1,9 @@
 Feature: Token
 
-  Scenario: Creación Exitosa de Token
+  Background:
     Given url apiUrl
+
+  Scenario: Creación Exitosa de Token
     Given path 'auth'
     And header Content-Type = 'application/json'
     And request
@@ -13,10 +15,11 @@ Feature: Token
     """
     When method Post
     Then status 200
+    And match response == "#object"
     And match response.token == '#notnull'
+    * def accessToken = response.token
 
   Scenario Outline: Creación No exitosa de Token
-    Given url apiUrl
     Given path 'auth'
     And header Content-Type = 'application/json'
     And request
@@ -28,6 +31,7 @@ Feature: Token
     """
     When method Post
     Then status 200
+    And match response == "#object"
     And match response.reason == 'Bad credentials'
     Examples:
       | username | password     |
@@ -35,3 +39,4 @@ Feature: Token
       | admin    | password1234 |
       |          | password123  |
       | admin    |              |
+      |          |              |
