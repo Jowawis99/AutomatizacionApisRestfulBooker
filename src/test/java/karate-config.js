@@ -5,8 +5,7 @@ function fn() {
     env = 'dev';
   }
   var config = {
-    env: env,
-    myVarName: 'someValue'
+    apiUrl: 'https://restful-booker.herokuapp.com/'
   }
   if (env == 'dev') {
     // customize
