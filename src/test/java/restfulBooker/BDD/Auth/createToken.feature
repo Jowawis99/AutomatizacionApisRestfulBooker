@@ -17,7 +17,6 @@ Feature: Token
     Then status 200
     And match response == "#object"
     And match response.token == '#notnull'
-    * def accessToken = response.token
 
   Scenario Outline: Creación No exitosa de Token
     Given path 'auth'

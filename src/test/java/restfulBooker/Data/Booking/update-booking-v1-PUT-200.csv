@@ -1,0 +1,7 @@
+idBooking,firstname,lastname,totalprice,depositpaid,checkin,checkout,additionalneeds
+259,Matias,Jimenez,5555,false,2023-03-13,2024-03-13,"Desayuno incluido"
+147,Lucas,Vargas,666,false,2023-04-13,2024-04-13,"Sin Desayuno incluido"
+184,Hernán,Cortéz,1,true,2023-04-13,2024-04-13,"Sin Desayuno ni reserva incluida"
+1,Brandon,Palacios,99999,true,2023-04-13,2024-04-13,"Desayuno y reserva incluida"
+2,Saul,Palacios,222,true,2023-04-13,2024-04-13,"Nada"
+3,Nol,Nol,0,false,2023-04-13,2024-04-13,"NA"
