@@ -64,5 +64,3 @@ Feature: Obtener Reservas
       | 3335555   |
       | 4445555   |
       | 1235555   |
-
-
