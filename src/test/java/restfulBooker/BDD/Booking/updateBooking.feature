@@ -1,10 +1,10 @@
-Feature: Actualizar una nueva Reserva
+Feature: Actualizar una Reserva
 
   Background:
     * def getToken = call read('classpath:restfulBooker/BDD/Auth/getToken.feature')
     * def token = getToken.accessToken
     Given url apiUrl
-    * def schemaCreateBooking = read('classpath:restfulBooker/req/Booking/schema-put-booking-200.json')
+    * def schemaUpdateBooking = read('classpath:restfulBooker/req/Booking/schema-put-booking-200.json')
 
   Scenario Outline: Actualización exitosa de una reserva
     Given path 'booking/<idBooking>'
@@ -28,7 +28,7 @@ Feature: Actualizar una nueva Reserva
     When method Put
     Then status 200
     And match response == "#object"
-    And match response contains schemaCreateBooking
+    And match response contains schemaUpdateBooking
     And match response.firstname contains "<firstname>"
     And match response.lastname contains "<lastname>"
     And match response.totalprice == <totalprice>
@@ -54,7 +54,7 @@ Feature: Actualizar una nueva Reserva
     When method Patch
     Then status 200
     And match response == "#object"
-    And match response contains schemaCreateBooking
+    And match response contains schemaUpdateBooking
     And match response.firstname contains "<firstname>"
     And match response.lastname contains "<lastname>"
     Examples:
@@ -75,7 +75,7 @@ Feature: Actualizar una nueva Reserva
     When method Patch
     Then status 200
     And match response == "#object"
-    And match response contains schemaCreateBooking
+    And match response contains schemaUpdateBooking
     And match response.totalprice == <totalprice>
     And match response.depositpaid == <depositpaid>
     Examples:
@@ -100,7 +100,7 @@ Feature: Actualizar una nueva Reserva
     Then status 200
     * print response
     And match response == "#object"
-    And match response contains schemaCreateBooking
+    And match response contains schemaUpdateBooking
     And match response.bookingdates.checkin contains "<checkin>"
     And match response.bookingdates.checkout contains "<checkout>"
     And match response.additionalneeds contains "<additionalneeds>"
